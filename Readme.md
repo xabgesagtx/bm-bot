@@ -58,3 +58,4 @@ docker-compose up -d
 A mysql database will be a available at port 3306 and an admin interface at port 8180. 
 
 Afterwards you can start your bot via IDE if you set the configuration for the telegram bot properly (name and taken).
+
