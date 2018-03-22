@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: "bm-bot"
+  datasource:
+    username: bmbot
+    password: bmbot
+    url: "jdbc:mysql://localhost/bmbot?useSSL=false"
+  jpa:
+    hibernate:
+      ddl-auto: update
+logging:
+  level:
+    org:
+      xabgesagtx: DEBUG
+config:
+  scrapers:
+    bm:
+      url: "https://bewegungsmelder.nadir.org/android/getEvents.php?downloadEvents"
+  botConfig:
+    startMessage: "Moin!\n\nViel Spaß mit dem BM-Bot!\n\nEr hilft dir dabei, durch den aktuellen Termindschungel in Hamburg zu navigieren.\n\n/help gibt dir Infos zur Benutzung"
+    inlineCacheTime: 300

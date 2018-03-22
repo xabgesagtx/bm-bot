@@ -1,0 +1,25 @@
+version: '3.6'
+
+services:
+
+  db:
+    image: mysql
+    restart: always
+    ports:
+      - 3306:3306
+    environment:
+      MYSQL_PASSWORD: bmbot
+      MYSQL_USER: bmbot
+      MYSQL_DATABASE: bmbot
+      MYSQL_ROOT_PASSWORD: bmbot
+    volumes:
+      - bmbotdb:/var/lib/mysql
+
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8180:8080
+
+volumes:
+  bmbotdb:
